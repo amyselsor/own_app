@@ -6,6 +6,10 @@ OwnApp::Application.routes.draw do
   get "main_pages/contact"
 
   get "main_pages/archive"
+    
+    get "main_pages/choreography"
+    
+    get "main_pages/webdevelopment"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

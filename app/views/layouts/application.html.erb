@@ -1,14 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OwnApp</title>
+  <title>AmySelsor</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+	<header class="navbar navbar-fixed-right">
+	</header>
+	<div>
+		<ul class="vertical-menu">
+			<li class="home-button"><%=link_to image_tag("homebutton.png") , "/main_pages/home/" %></li>
+			<li class="choreography-button"><%=link_to image_tag("choreographybutton.png"), "/main_pages/choreography/"%></li>
+			<li class="development-button"><%=link_to	image_tag("developmentbutton.png"), "/main_pages/development/"%></li>
+			<li class="contact-button"><%=link_to image_tag("contactbutton.png"),"/main_pages/about/"%></li>
+			<li class="twitter-feed">
+<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 3,
+  interval: 30000,
+  width: 200,
+  height: 200,
+  theme: {
+    shell: {
+      background: '#333333',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#000000',
+      color: '#ffffff',
+      links: '#a83af2'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: false,
+    behavior: 'all'
+  }
+}).render().setUser('asels').start();
+</script></li>
+		</ul>
+		
+		<footer>
+		<ul class="footer-menu">
+			<li class="choreography-footer"><a href="/choreography/">Choreography</a></li>
+			<li class="development-footer"><a href="/development/">Development</a></li>
+			<li class="Contact-footer"><a href="/contact/">Contact</a></li>
+			<li>Created By: Amy Selsor</li>
+		</ul>
+	</footer>
+	</div>
+		<div class="container">
+		<%= yield %>
+	</div>
 
 </body>
 </html>
+<div>

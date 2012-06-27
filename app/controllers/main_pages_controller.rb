@@ -1,13 +1,13 @@
 class MainPagesController < ApplicationController
   def home
   end
-
-  def about
-  end
-
+    
   def contact
   end
-
-  def archive
-  end
+    
+    def choreography
+        end
+    
+    def development
+        end
 end
